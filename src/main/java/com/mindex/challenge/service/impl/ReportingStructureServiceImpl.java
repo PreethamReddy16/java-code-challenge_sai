@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.*;
+//Business Logic for numberOfRecords(Task_1)
+
 
 @Service
 public class ReportingStructureServiceImpl implements ReportingStructureService{
@@ -26,7 +28,7 @@ public class ReportingStructureServiceImpl implements ReportingStructureService{
         int result = 0;
         //direct reports count through DFS
 
-        //Tto get unique direct reports using set
+        //to get unique direct reports using set
         Set<Employee> isPresent = new HashSet<>();
         Employee employee = null;
         try {
@@ -34,7 +36,7 @@ public class ReportingStructureServiceImpl implements ReportingStructureService{
         } catch (RuntimeException ex) {
             return -1;
         }
-        /// DFS
+        /// Performed DFS to get the reports under particular person
         Stack<Employee> stack = new Stack<>();
         stack.push(employee);
 

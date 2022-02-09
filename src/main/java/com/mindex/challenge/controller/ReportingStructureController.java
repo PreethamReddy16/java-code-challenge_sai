@@ -14,7 +14,7 @@ public class ReportingStructureController {
 
     @Autowired
     private ReportingStructureService rsService;
-
+    //Getting count of no.of reports that the given employee has
     @GetMapping("/reportingStructure/{id}")
     public int numberOfReports(@PathVariable String id) {
         LOG.debug("obtain the number of requests for reports for the id [{}]", id);

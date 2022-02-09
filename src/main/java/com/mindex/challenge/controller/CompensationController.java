@@ -13,13 +13,13 @@ public class CompensationController {
 
     @Autowired
     private CompensationService compensationService;
-
+    //posting compensation of an employee
     @PostMapping("/compensation")
     public Compensation create(@RequestBody Compensation compensation) {
         LOG.debug("Received compensation create request for [{}]", compensation);
         return compensationService.create(compensation);
     }
-
+    //Getting particular ID compensation details
     @GetMapping("/compensation/{id}")
     public Compensation read(@PathVariable String id) {
         LOG.debug("Received compensation read request for employeeId [{}]", id);
